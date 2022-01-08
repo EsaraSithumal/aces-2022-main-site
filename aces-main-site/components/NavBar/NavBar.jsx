@@ -1,6 +1,13 @@
 import React, { Component } from "react";
 
 
+
+
+
+
+
+
+
 class NavBar extends Component {
   state = {
     click: true,
@@ -24,15 +31,24 @@ class NavBar extends Component {
               <img src="./img/logo.png" alt=""/>
             </a>
             <div className="menu-icon" onClick={this.handleMenu}>
+              <label for="" className="menu-btn">
+
               <i
                 className={this.state.click ? "fas fa-bars" : "fas fa-times"}
               >
               </i>
+
+              </label>
+              
+
+
             </div>
             <ul className={!this.state.click ? "nav-menu active" : "nav-menu"}>
+
+
               <li className="nav-item">
                 <a
-                  to="/"
+                  href="/"
                   className={
                     this.props.page_no == 1
                       ? "nav-links current-page"
@@ -43,6 +59,8 @@ class NavBar extends Component {
                   HOME
                 </a>
               </li>
+
+
               <li className="nav-item">
                 <a
                   href="/latest"
@@ -56,6 +74,8 @@ class NavBar extends Component {
                   LATEST
                 </a>
               </li>
+
+
               <li className="nav-item">
                 <a
                   href="/blog"
@@ -69,6 +89,9 @@ class NavBar extends Component {
                   BLOG
                 </a>
               </li>
+
+
+
               <li className="nav-item">
                 <a
                   href="/teams"
@@ -82,8 +105,40 @@ class NavBar extends Component {
                   TEAMS
                 </a>
               </li>
+
+              
+
+              
+
+
+
+              <li className="nav-item">
+                <a
+                  href="https://projects.ce.pdn.ac.lk/"
+		  target="_blank"
+                  className="button"
+                  onClick={() => this.closeMenu(4)}
+                >
+                  PROJECTS
+                </a>
+              </li>
+            
+              
+
+             
+
+
+
             </ul>
+
+           
+
+           
+          
           </div>
+
+          
+
         </nav>
       </>
     );
